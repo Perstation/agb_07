@@ -1,159 +1,72 @@
 body {
-  background-image: url('./images/background.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: black;
+  height: 100vh;
   height: 100svh;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-.wrapper {
-  display: grid;
-  padding-top: 109px;
-}
-
-.wrapper .logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 744px;
-  margin: 0 auto 36px;
-  padding-right: 116px;
-}
-
-.wrapper .logo-container .logo {
-  width: 367px;
-}
-
-.wrapper .title-container {
-  margin-bottom: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-.wrapper .title-container .title {
-  width: 744px;
-  z-index: 2;
-}
-
-.wrapper .btn-container {
+.container {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  margin-bottom: 50px;
-  height: 34px;
-  z-index: 1;
+  width: 100vw;
+  min-height: 100vh;
 }
 
-.wrapper .btn-container .btn {
-  width: 600px;
-  height: 401px;
-  background-repeat: no-repeat;
-  background-size: cover;
+.pc {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.mobile {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.img {
+  width: 100vw;
+  height: auto;
+}
+.btn {
   cursor: pointer;
-  z-index: 1;
+  position: absolute;
+  opacity: 0.3;
 }
+.btn1 {
+  top: calc(((1920 / 1086) * 20.6) * 1vw);
+  left: calc(((1920 / 1086) * 17.2) * 1vw);
+  width: 19vw;
+  aspect-ratio: calc(40 / 10);
 
-.wrapper .btn-container .btn:nth-child(1) {
-  background-image: url('./images/bt_1.png');
-  background-position: left;
+  @media (max-width: 768px) {
+    width: 70vw;
+    top: calc(((520 / 1382) * 455) * 1vw);
+    left: unset;
+  }
 }
-.wrapper .btn-container .btn:nth-child(2) {
-  background-image: url('./images/bt_2.png');
-  background-position: right;
-}
+.btn2 {
+  top: calc(((1920 / 1086) * 20.6) * 1vw);
+  right: calc(((1920 / 1086) * 17.2) * 1vw);
+  width: 19vw;
+  aspect-ratio: calc(40 / 10);
 
-.wrapper .desc-container {
-  margin-bottom: 10px;
-  font-size: 30px;
-  color: white;
-  text-align: center;
-  z-index: 2;
+  @media (max-width: 768px) {
+    width: 70vw;
+    top: calc(((520 / 1382) * 520) * 1vw);
+    right: unset;
+  }
 }
-.wrapper .desc-container span {
-  z-index: 4;
-}
+.btn3 {
+  top: calc(((1920 / 1086) * 26.3) * 1vw);
+  width: 39vw;
+  aspect-ratio: calc(40 / 5);
 
-.wrapper .btn2-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-}
-.wrapper .btn2-container .btn {
-  width: 974px;
-  aspect-ratio: calc(974 / 147);
-  max-width: calc(100vw - 90px);
-  background-image: url('./images/bt_3.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
-  z-index: 3;
-}
-
-/** tablet */
-@media (max-width: 1440px) {
-  .wrapper {
-    padding-top: 105px;
-  }
-  .wrapper .logo-container {
-    margin-bottom: 40px;
-  }
-}
-
-/** mobile */
-@media (max-width: 700px) {
-  .wrapper {
-    padding-top: 55px;
-  }
-  .wrapper .logo-container {
-    margin-bottom: 38px;
-    padding-right: 90px;
-  }
-  .wrapper .logo-container .logo {
-    width: 275px;
-  }
-  .wrapper .title-container {
-    margin-bottom: 6px;
-  }
-  .wrapper .title-container .title {
-    width: calc(100vw - 90px);
-  }
-  .wrapper .desc-container {
-    font-size: 25px;
-  }
-  .wrapper .btn-container {
-    flex-direction: column;
-    margin-bottom: 6px;
-    height: 150px;
-  }
-  .wrapper .btn-container .btn {
-    width: calc(100vw + 50px);
-  }
-  .wrapper .btn-container .btn:nth-child(1) {
-    background-position: center;
-  }
-  .wrapper .btn-container .btn:nth-child(2) {
-    background-position: center;
-  }
-}
-
-/** mobile */
-@media (max-width: 400px) {
-  .wrapper .logo-container {
-    padding-right: 1vw;
-  }
-  .wrapper .desc-container {
-    font-size: 20px;
+  @media (max-width: 768px) {
+    width: 93vw;
+    top: calc(((520 / 1382) * 610) * 1vw);
   }
 }
